@@ -1,0 +1,46 @@
+.wrapper {
+  color: white;
+  font-size: 16px;
+  background-color: var(--primary);
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  grid-template-areas: "developer  confidencePolitic userPolitic";
+  align-items: center;
+  padding: 25px 30px;
+  gap: 30px;
+}
+.wrapper a:hover {
+  color: var(--gray-light);
+}
+.developer {
+  grid-area: developer;
+}
+.developer:hover {
+  cursor: default;
+}
+.confidencePolitic {
+  grid-area: confidencePolitic;
+  text-decoration: none;
+  color: var(--white);
+  transition: all 0.5s;
+}
+.userPolitic {
+  grid-area: userPolitic;
+  text-decoration: none;
+  color: var(--white);
+  transition: all 0.5s;
+}
+
+@media (max-width: 765px) {
+  .wrapper {
+    height: auto;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "confidencePolitic"
+      "userPolitic"
+      "developer";
+
+    row-gap: 10px;
+    text-align: center;
+  }
+}

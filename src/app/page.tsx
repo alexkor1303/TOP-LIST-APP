@@ -1,10 +1,9 @@
 "use client";
 import React from "react";
 import { useState } from "react";
-import { Htag, ButtonElem, Paragraph, Rating } from "../../components";
-import { withLayout } from "../../layout/Layout";
+import { Htag, ButtonElem, Paragraph, Tag, Rating } from "../../components";
 
-function Home() {
+export default function Home() {
   const [rating, setRating] = useState<number>(4);
   return (
     <>
@@ -15,12 +14,10 @@ function Home() {
       <ButtonElem appearance="ghost" arrow="down">
         Кнопка
       </ButtonElem>
-      <Paragraph size="small">sopa!</Paragraph>
+      <Paragraph size="small">Hopa!</Paragraph>
       <Paragraph size="medium">Hopa!</Paragraph>
       <Paragraph size="high">Hopa!</Paragraph>
       <Rating rating={rating} isEditable setRating={setRating}></Rating>
     </>
   );
 }
-
-export default withLayout(Home);
